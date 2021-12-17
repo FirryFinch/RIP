@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Схемы{% endblock %}
+{% block content %}
+<ul>
+ {% for engine in engines %}
+ <li><a href="{% url 'engine_url' engine.id %}">{{ engine.title }}</a></li>
+ {% empty %}
+ <li>Список пуст</li>
+     {% endfor %}
+</ul>
+{% endblock %}

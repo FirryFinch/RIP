@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+{% block content %}
+ {% if id == 1 %}
+ {% include 'engine1.html' with name=id %}
+ {% elif id == 2 %}
+ {% include 'engine2.html' with name=id %}
+ {% elif id == 3 %}
+ {% include 'engine3.html' with name=id %}
+ {% endif %}
+{% endblock %}
