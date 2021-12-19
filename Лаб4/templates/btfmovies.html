@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Back to the Future{% endblock %}
+{% block content %}
+<ul>
+ {% for btfmovie in btfmovies %}
+ <li><a href="{% url 'btfmovie_url' btfmovie.id %}">{{ btfmovie.title }}</a></li>
+ {% empty %}
+ <li>Список пуст</li>
+     {% endfor %}
+</ul>
+{% endblock %}

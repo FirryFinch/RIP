@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+{% block content %}
+ {% if id == 1 %}
+ {% include 'btf1.html' with name=id %}
+ {% elif id == 2 %}
+ {% include 'btf2.html' with name=id %}
+ {% elif id == 3 %}
+ {% include 'btf3.html' with name=id %}
+ {% endif %}
+{% endblock %}
