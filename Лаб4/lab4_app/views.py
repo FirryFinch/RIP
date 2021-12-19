@@ -1,16 +1,16 @@
 from django.shortcuts import render
 
 
-def engines(request):
-    return render(request, 'engines.html', {'engines': [
-        {'title': 'Рядная', 'id': 1},
-        {'title': 'V-образная', 'id': 2},
-        {'title': 'Оппозитная', 'id': 3}
+def btfmovies(request):
+    return render(request, 'btfmovies.html', {'btfmovies': [
+        {'title': 'Назад в будущее (1985)', 'id': 1},
+        {'title': 'Назад в будущее 2 (1989)', 'id': 2},
+        {'title': 'Назад в будущее 3 (1990)', 'id': 3}
     ]
     })
 
 
-def engine(request, id):
-    return render(request, 'engine.html', {
+def btfmovie(request, id):
+    return render(request, 'btfmovie.html', {
         'id': id
     })
