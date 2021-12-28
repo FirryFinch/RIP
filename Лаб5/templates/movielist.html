@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Лабораторная работа №5{% endblock %}
+
+{% block content %}
+     <h2>Фильмы:</h2>
+<h3><ul>
+    {% for movie in data.movies %}
+        <li><a href="{% url 'movie_url' movie.id %}">{{movie.name}}</a></li>
+    {% empty %}
+        <li>Список пуст</li>
+    {% endfor %}
+</ul>
+</h3>
+    <h2>Платформы:</h2>
+    <h3>
+        <ul>
+    {% for platform in data.platforms %}
+        <li><a href="{% url 'platform_url' platform.id %}">{{platform.name}}</a></li>
+    {% empty %}
+        <li>Список пуст</li>
+    {% endfor %}
+        </ul>
+    </h3>
+{% endblock %}

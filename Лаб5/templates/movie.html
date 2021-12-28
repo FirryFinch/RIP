@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ data.movie.name }}{% endblock %}
+
+{% block content %}
+    <div>Название: {{ data.movie.name }}</div>
+     {% for platform in data.platforms %}
+         {% if  data.movie.platform == platform.id %}
+        <div>Платформа: {{ platform.name }}</div>
+         {% endif %}
+    {% endfor %}
+        <div>Описание: {{ data.movie.description }}</div>
+{% endblock %}
