@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Edit movie</title>
+</head>
+<body class="container">
+    <form method="POST">
+        {% csrf_token %}
+        <p>
+            <label>Введите название</label><br>
+            <input type="text" name="name" value="{{movie.name}}" />
+        </p>
+        <p>
+            <label>Введите описание</label><br>
+            <input type="text" name="description" value="{{movie.description}}" />
+        </p>
+        <p>
+            <label>Введите рейтинг</label><br>
+            <input type="text" name="rating" value="{{movie.rating}}" />
+        </p>
+        <p>
+            <label>Введите платформу</label><br>
+            <input type="text" name="platform" value="{{movie.platform.name}}" />
+        </p>
+        <input type="submit" value="Сохранить" >
+    </form>
+</body>
+</html>
